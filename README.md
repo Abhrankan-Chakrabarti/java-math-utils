@@ -1,8 +1,16 @@
-# Java Math Programs
+# Java Math Utils
 
-This repository contains Java programs for various mathematical computations.
+Collection of Java programs for mathematical computations, including tools for calculating square roots, solving Pell's equation, and other numerical tasks.
 
 ## Programs
+
+### `sqrt` Class
+
+This class provides functionality for calculating square roots using the continued fraction representation. It needs to be compiled before running other programs.
+
+#### Usage
+
+To compile the `sqrt` class, use `javac sqrt.java`.
 
 ### Pell's Equation Solver (`pell_equation_solver.java`)
 
