@@ -55,3 +55,17 @@ java exp_bs [x] [digits]
 ```
 
 Replace `[x]` with the power of \( e \) and `[digits]` with the number of digits of precision you want in the result.
+
+### Golden Ratio Calculator (`golden_ratio_pell.java`)
+
+This program calculates the golden ratio (ϕ) to a specified number of decimal digits using the Pell's equation method.
+
+#### Usage
+
+Compile the program using `javac golden_ratio_pell.java`, and run it with the desired number of digits:
+
+```bash
+java golden_ratio_pell [digits]
+```
+
+Replace `[digits]` with the number of digits of precision you want in the golden ratio.
