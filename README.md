@@ -28,10 +28,16 @@ This program calculates the square root of a number using the Pell's equation me
 
 To run the program, compile it using `javac pell_sqrt.java` and then run it using `java pell_sqrt [number] [digits]`, where `[number]` is the number you want to find the square root of and `[digits]` is the number of digits you want in the result.
 
-### Golden Ratio Calculator (`golden_ratio_pell.java`)
+### Chudnovsky Algorithm with Binary Splitting and Pell's Equation (`chudnovsky_bs_pell.java`)
 
-This program calculates the golden ratio using the Pell's equation method.
+This program calculates the value of π (pi) using the Chudnovsky algorithm combined with the binary splitting method and the Pell's equation method for square roots.
 
 #### Usage
 
-To run the program, compile it using `javac golden_ratio_pell.java` and then run it using `java golden_ratio_pell [digits]`, where `[digits]` is the number of digits of precision you want in the golden ratio approximation.
+Compile the program using `javac chudnovsky_bs_pell.java`, and run it with the desired number of digits:
+
+```bash
+java chudnovsky_bs_pell [digits]
+```
+
+Replace `[digits]` with the number of digits of precision you want in the value of π.
