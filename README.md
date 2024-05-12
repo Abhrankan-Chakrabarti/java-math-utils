@@ -41,3 +41,17 @@ java chudnovsky_bs_pell [digits]
 ```
 
 Replace `[digits]` with the number of digits of precision you want in the value of π.
+
+### Exponential Function Calculator (`exp_bs.java`)
+
+This program computes \( e^x \) to a specified number of decimal digits using the Taylor series.
+
+#### Usage
+
+Compile the program using `javac exp_bs.java`, and run it with the desired power of \( e \) and number of digits:
+
+```bash
+java exp_bs [x] [digits]
+```
+
+Replace `[x]` with the power of \( e \) and `[digits]` with the number of digits of precision you want in the result.
