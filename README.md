@@ -28,44 +28,22 @@ This program calculates the square root of a number using the Pell's equation me
 
 To run the program, compile it using `javac pell_sqrt.java` and then run it using `java pell_sqrt [number] [digits]`, where `[number]` is the number you want to find the square root of and `[digits]` is the number of digits you want in the result.
 
-### Chudnovsky Algorithm with Binary Splitting and Pell's Equation (`chudnovsky_bs_pell.java`)
+### Chudnovsky Algorithm with Binary Splitting for Calculating Pi (`chudnovsky_bs_pell.java`)
 
-This program calculates the value of π (pi) using the Chudnovsky algorithm combined with the binary splitting method and the Pell's equation method for square roots.
+This program calculates the value of Pi to a specified number of decimal digits using the Chudnovsky algorithm with binary splitting and the Pell's equation method.
 
 #### Usage
 
-Compile the program using `javac chudnovsky_bs_pell.java`, and run it with the desired number of digits:
-
-```bash
-java chudnovsky_bs_pell [digits]
-```
-
-Replace `[digits]` with the number of digits of precision you want in the value of π.
+To run the program, compile it using `javac chudnovsky_bs_pell.java` and then run it using `java chudnovsky_bs_pell [digits]`, where `[digits]` is the number of decimal digits of Pi you want to calculate.
 
 ### Exponential Function Calculator (`exp_bs.java`)
 
-This program computes \( e^x \) to a specified number of decimal digits using the Taylor series.
+This program calculates the value of e raised to a specified power to a specified number of decimal digits using the Taylor Series method.
 
 #### Usage
 
-Compile the program using `javac exp_bs.java`, and run it with the desired power of \( e \) and number of digits:
+To run the program, compile it using `javac exp_bs.java` and then run it using `java exp_bs [x] [digits]`, where `[x]` is the power of e and `[digits]` is the number of decimal digits you want in the result.
 
-```bash
-java exp_bs [x] [digits]
-```
+## Benchmarking
 
-Replace `[x]` with the power of \( e \) and `[digits]` with the number of digits of precision you want in the result.
-
-### Golden Ratio Calculator (`golden_ratio_pell.java`)
-
-This program calculates the golden ratio (ϕ) to a specified number of decimal digits using the Pell's equation method.
-
-#### Usage
-
-Compile the program using `javac golden_ratio_pell.java`, and run it with the desired number of digits:
-
-```bash
-java golden_ratio_pell [digits]
-```
-
-Replace `[digits]` with the number of digits of precision you want in the golden ratio.
+Included in the repository is a benchmarking program (`SqrtBenchmark.java`) that compares the performance of the `BigDecimal` in-built `sqrt` method and the `pell_sqrt` method for calculating the square root of a number. To run the benchmark, compile the program using `javac SqrtBenchmark.java` and then run it using `java SqrtBenchmark`.
