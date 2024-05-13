@@ -1,7 +1,3 @@
-Here is the updated README with the mention that `pell_sqrt.java` needs to be compiled first before using the sqrt benchmark:
-
----
-
 # Java Math Utils
 
 Collection of Java programs for mathematical computations, including tools for calculating square roots, solving Pell's equation, and other numerical tasks.
@@ -63,7 +59,3 @@ This program benchmarks the performance of calculating square roots using BigDec
 #### Usage
 
 To run the benchmark, compile it using `javac SqrtBenchmark.java` and then run it using `java SqrtBenchmark`.
-
----
-
-You can customize this template further to add more details or instructions as needed.
