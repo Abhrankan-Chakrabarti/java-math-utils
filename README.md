@@ -1,3 +1,7 @@
+Here is the updated README with the mention that `pell_sqrt.java` needs to be compiled first before using the sqrt benchmark:
+
+---
+
 # Java Math Utils
 
 Collection of Java programs for mathematical computations, including tools for calculating square roots, solving Pell's equation, and other numerical tasks.
@@ -28,30 +32,38 @@ This program calculates the square root of a number using the Pell's equation me
 
 To run the program, compile it using `javac pell_sqrt.java` and then run it using `java pell_sqrt [number] [digits]`, where `[number]` is the number you want to find the square root of and `[digits]` is the number of digits you want in the result.
 
-### Chudnovsky Algorithm with Binary Splitting for Calculating Pi (`chudnovsky_bs_pell.java`)
+### Golden Ratio Calculator (`golden_ratio_pell.java`)
 
-This program calculates the value of Pi to a specified number of decimal digits using the Chudnovsky algorithm with binary splitting and the Pell's equation method.
+This program calculates the golden ratio using the Pell's equation method.
 
 #### Usage
 
-To run the program, compile it using `javac chudnovsky_bs_pell.java` and then run it using `java chudnovsky_bs_pell [digits]`, where `[digits]` is the number of decimal digits of Pi you want to calculate.
+To run the program, compile it using `javac golden_ratio_pell.java` and then run it using `java golden_ratio_pell [digits]`, where `[digits]` is the number of digits you want in the result.
+
+### Pi Calculator (`chudnovsky_bs_pell.java`)
+
+This program calculates the value of pi using the Chudnovsky algorithm.
+
+#### Usage
+
+To run the program, compile it using `javac chudnovsky_bs_pell.java` and then run it using `java chudnovsky_bs_pell [digits]`, where `[digits]` is the number of digits of pi you want to calculate.
 
 ### Exponential Function Calculator (`exp_bs.java`)
 
-This program calculates the value of e raised to a specified power to a specified number of decimal digits using the Taylor Series method.
+This program calculates the value of e raised to a given power using the Taylor series.
 
 #### Usage
 
-To run the program, compile it using `javac exp_bs.java` and then run it using `java exp_bs [x] [digits]`, where `[x]` is the power of e and `[digits]` is the number of decimal digits you want in the result.
+To run the program, compile it using `javac exp_bs.java` and then run it using `java exp_bs [x] [digits]`, where `[x]` is the power of e and `[digits]` is the number of digits in the result.
 
-### Golden Ratio Calculator (`golden_ratio_pell.java`)
+### Square Root Benchmark (`SqrtBenchmark.java`)
 
-This program calculates the value of the Golden Ratio to a specified number of decimal digits using the Chudnovsky algorithm with binary splitting and the Pell's equation method.
+This program benchmarks the performance of calculating square roots using BigDecimal's in-built sqrt method and the custom pell_sqrt method. Note that `pell_sqrt.java` needs to be compiled first before using the benchmark.
 
 #### Usage
 
-To run the program, compile it using `javac golden_ratio_pell.java` and then run it using `java golden_ratio_pell [digits]`, where `[digits]` is the number of decimal digits of the Golden Ratio you want to calculate.
+To run the benchmark, compile it using `javac SqrtBenchmark.java` and then run it using `java SqrtBenchmark`.
 
-## Benchmarking
+---
 
-Included in the repository is a benchmarking program (`SqrtBenchmark.java`) that compares the performance of the `BigDecimal` in-built `sqrt` method and the `pell_sqrt` method for calculating the square root of a number. To run the benchmark, compile the program using `javac SqrtBenchmark.java` and then run it using `java SqrtBenchmark`.
+You can customize this template further to add more details or instructions as needed.
