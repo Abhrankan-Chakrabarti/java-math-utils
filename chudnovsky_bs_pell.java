@@ -7,6 +7,9 @@ public class chudnovsky_bs_pell
 // how many to display if the user doesn't specify:
 public static int DEFAULT_DIGITS = 60;
 
+// whether to use default digits or take digits as input:
+public static boolean USE_DEFAULT_DIGITS = false;
+
 // how many decimal digits the algorithm generates per iteration:
 public static double DIGITS_PER_ITERATION = 14.1816474627254776555;
 
@@ -139,6 +142,12 @@ public static void print_usage()
 	System.out.println("usage: java chudnovsky_bs_pell [digits]");
 }
 
+public static int input(String s)
+    {
+        System.out.print(s);
+        return new Scanner(System.in).nextInt();
+    }    
+
 /**
  * MAIN
  *
@@ -152,7 +161,10 @@ public static void main(String args[])
 	switch (len(args))
 	{
 	case 0:
-		digits = DEFAULT_DIGITS;
+	    if (USE_DEFAULT_DIGITS)
+	        digits = DEFAULT_DIGITS;
+	    else
+	        digits = input("How many digits of π? :\t");
 		break;
 
 	case 1:
