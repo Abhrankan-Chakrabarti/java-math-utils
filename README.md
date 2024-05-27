@@ -59,3 +59,19 @@ This program benchmarks the performance of calculating square roots using BigDec
 #### Usage
 
 To run the benchmark, compile it using `javac SqrtBenchmark.java` and then run it using `java SqrtBenchmark`.
+
+### Catalan Number Calculator (`CatalanNumber.java`)
+
+This program finds the first n Catalan numbers.
+
+#### Usage
+
+To run the program, compile it using `javac CatalanNumber.java` and then run it using `java CatalanNumber`.
+
+### Fibonacci Calculator (`Fibonacci.java`)
+
+This program computes the n-th Fibonacci number.
+
+#### Usage
+
+To run the program, compile it using `javac Fibonacci.java` and then run it using `java Fibonacci`.
