@@ -75,3 +75,11 @@ This program computes the n-th Fibonacci number.
 #### Usage
 
 To run the program, compile it using `javac Fibonacci.java` and then run it using `java Fibonacci`.
+
+### RSA Cryptography (`RSA.java`)
+
+This program implements encryption and decryption using RSA algorithm.
+
+#### Usage
+
+To run the program, compile it using `javac RSA.java` and then run it using `java RSA`.
