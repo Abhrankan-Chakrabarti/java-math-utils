@@ -78,7 +78,7 @@ To run the program, compile it using `javac Fibonacci.java` and then run it usin
 
 ### RSA Cryptography (`RSA.java`)
 
-This program implements encryption and decryption using RSA algorithm.
+This program illustrates encryption and decryption using RSA algorithm.
 
 #### Usage
 
