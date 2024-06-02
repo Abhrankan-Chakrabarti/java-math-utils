@@ -1,90 +1,53 @@
 import java.math.BigInteger;
-import java.util.Random;
+import java.security.SecureRandom;
 import java.util.Scanner;
+import java.nio.charset.StandardCharsets;
 
 public class RSA {
-
-    private BigInteger n, e, d; // (e,n) Public Key, (d,n) Private Key.
+    private BigInteger n, e, d;
+    private SecureRandom random = new SecureRandom();
+    private int bitlen = 2048;
 
     public RSA() {
-        int keySize = 256;
-        BigInteger p = BigInteger.probablePrime(keySize, new Random());
-        BigInteger q = BigInteger.probablePrime(keySize, new Random());
-        n = p.multiply(q); //n = p*q
+        generateKeys();
+    }
 
-        BigInteger p2 = p.subtract(BigInteger.ONE); //p-1
-        BigInteger q2 = q.subtract(BigInteger.ONE); //q-1
-        BigInteger w = p2.multiply(q2); //(p-1).(q-1)
+    private void generateKeys() {
+        BigInteger p = BigInteger.probablePrime(bitlen / 2, random);
+        BigInteger q = BigInteger.probablePrime(bitlen / 2, random);
+        n = p.multiply(q);
 
-        this.e = new BigInteger(keySize + 1, new Random());
-        while ((!this.e.gcd(w).equals(BigInteger.ONE)) || (this.e.compareTo(w) != -1)) {
-            e = new BigInteger(keySize + 1, new Random());
-            //e =  new BigInteger("65537");
+        BigInteger phi = p.subtract(BigInteger.ONE).multiply(q.subtract(BigInteger.ONE));
+        e = BigInteger.valueOf(65537); // Common choice for e
+        while (phi.gcd(e).compareTo(BigInteger.ONE) > 0 && e.compareTo(phi) < 0) {
+            e = e.add(BigInteger.ONE);
         }
-
-        d = e.modInverse(w);
-
-        //System.out.println(" P : " + p);
-        //System.out.println(" Q : " + q);
+        d = e.modInverse(phi);
     }
 
-    BigInteger encrypt(BigInteger message) {
-        return message.modPow(e, n);
-    }
-    public static BigInteger encrypt2(BigInteger message, BigInteger e2, BigInteger n2) {
-        return message.modPow(e2, n2);
-    }
-    BigInteger decrypt(BigInteger encryptedMessage) {
-        return encryptedMessage.modPow(d, n);
-    }
-    public static BigInteger decrypt2(BigInteger encryptedMessage, BigInteger d2, BigInteger n2) {
-        return encryptedMessage.modPow(d2, n2);
+    public String encrypt(String message) {
+        BigInteger plaintext = new BigInteger(message.getBytes(StandardCharsets.UTF_8));
+        BigInteger ciphertext = plaintext.modPow(e, n);
+        return ciphertext.toString(16); // Convert to hexadecimal string
     }
 
-    public BigInteger getN() {
-        return n;
+    public String decrypt(String encrypted) {
+        BigInteger ciphertext = new BigInteger(encrypted, 16); // Convert back from hexadecimal string
+        BigInteger plaintext = ciphertext.modPow(d, n);
+        return new String(plaintext.toByteArray(), StandardCharsets.UTF_8);
     }
 
-    public void setN(BigInteger n) {
-        this.n = n;
-    }
-
-    public BigInteger getE() {
-        return e;
-    }
-
-    public void setE(BigInteger e) {
-        this.e = e;
-    }
-
-    public BigInteger getD() {
-        return d;
-    }
-
-    public void setD(BigInteger d) {
-        this.d = d;
-    }
-
-    public static void main(String args[]) {
-        System.out.println("ENTER MESSAGE OR STRING TO ENCRYPT");
-        String msg = new Scanner(System.in).nextLine();
+    public static void main(String[] args) {
         RSA rsa = new RSA();
-        BigInteger m = BigInteger.ZERO, t = BigInteger.valueOf(1000);
-        for (int i = 0, l = msg.length(); i < l; i++)
-            m = m.multiply(t).add(BigInteger.valueOf(msg.charAt(i) + 100));
-        m = rsa.encrypt(m);
-        String enc = "";
-        System.out.println("\nTHE ENCRYPTED MESSAGE IS");
-        for (; !m.equals(BigInteger.ZERO); m = m.divide(t))
-            enc = (char)(Integer.parseInt(m.mod(t).toString())) + enc;
-        System.out.println(enc);
-        for (int i = 0, l = enc.length(); i < l; i++)
-            m = m.multiply(t).add(BigInteger.valueOf(enc.charAt(i)));
-        m = rsa.decrypt(m);
-        String dec = "";
-        System.out.println("\nTHE DECRYPTED MESSAGE IS");
-        for (; !m.equals(BigInteger.ZERO); m = m.divide(t))
-            dec = (char)(Integer.parseInt(m.mod(t).toString()) - 100) + dec;
-        System.out.println(dec);
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter a message to encrypt:");
+        String message = scanner.nextLine();
+
+        String encryptedMessage = rsa.encrypt(message);
+        System.out.println("Encrypted Message: " + encryptedMessage);
+
+        String decryptedMessage = rsa.decrypt(encryptedMessage);
+        System.out.println("Decrypted Message: " + decryptedMessage);
     }
 }
