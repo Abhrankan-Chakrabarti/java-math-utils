@@ -78,7 +78,7 @@ To run the program, compile it using `javac Fibonacci.java` and then run it usin
 
 ### RSA Cryptography (`RSA.java`)
 
-This program illustrates encryption and decryption using RSA algorithm.
+This program is a straightforward implementation of RSA encryption, demonstrating the generation of keys, encryption of messages, and decryption back to the original text. It's a practical example of applying RSA for secure communication, showcasing the mathematical principles behind one of the most popular encryption algorithms in use today.
 
 #### Usage
 
