@@ -1,85 +1,130 @@
 # Java Math Utils
 
-Collection of Java programs for mathematical computations, including tools for calculating square roots, solving Pell's equation, and other numerical tasks.
+Welcome to the Java Math Utils repository, a comprehensive collection of Java programs designed for mathematical computations. This repository includes a variety of tools and algorithms aimed at solving numerical tasks, from calculating square roots and solving Pell's equation to finding Catalan numbers and computing Fibonacci sequences. Whether you're a student, educator, or programming enthusiast, these utilities offer a practical exploration into the application of mathematical principles through programming.
+
+Each program within this collection is crafted to demonstrate specific mathematical concepts and algorithms, making use of Java's powerful computational capabilities. The repository is structured to provide clear usage instructions for compiling and running each program, ensuring that users can easily navigate and utilize the tools provided.
+
+Whether you're interested in the intricacies of number theory, the elegance of mathematical sequences, or the application of encryption algorithms, the Java Math Utils repository serves as a valuable resource for enhancing your understanding and skills in mathematical computing.
 
 ## Programs
 
 ### `sqrt` Class
 
-This class provides functionality for calculating square roots using the continued fraction representation. It needs to be compiled before running other programs.
+This class provides functionality for calculating square roots using the continued fraction representation. It is a prerequisite for running other programs that require square root calculations.
 
 #### Usage
 
-To compile the `sqrt` class, use `javac sqrt.java`.
+```bash
+javac sqrt.java
+```
 
 ### Pell's Equation Solver (`pell_equation_solver.java`)
 
-This program solves the Pell's equation x² - Dy² = 1 for a given value of D and finds the first n solutions.
+Solves the Pell's equation \(x^2 - Dy^2 = 1\) for a given value of \(D\) and finds the first \(n\) solutions.
 
 #### Usage
 
-To run the program, compile it using `javac pell_equation_solver.java` and then run it using `java pell_equation_solver [D] [n]`, where `[D]` is the value of D and `[n]` is the number of solutions you want to find.
+```bash
+javac pell_equation_solver.java
+java pell_equation_solver [D] [n]
+```
 
 ### Square Root Calculator (`pell_sqrt.java`)
 
-This program calculates the square root of a number using the Pell's equation method.
+Calculates the square root of a number using the Pell's equation method.
 
 #### Usage
 
-To run the program, compile it using `javac pell_sqrt.java` and then run it using `java pell_sqrt [number] [digits]`, where `[number]` is the number you want to find the square root of and `[digits]` is the number of digits you want in the result.
+```bash
+javac pell_sqrt.java
+java pell_sqrt [number] [digits]
+```
 
 ### Golden Ratio Calculator (`golden_ratio_pell.java`)
 
-This program calculates the golden ratio using the Pell's equation method.
+Calculates the golden ratio using the Pell's equation method.
 
 #### Usage
 
-To run the program, compile it using `javac golden_ratio_pell.java` and then run it using `java golden_ratio_pell [digits]`, where `[digits]` is the number of digits you want in the result.
+```bash
+javac golden_ratio_pell.java
+java golden_ratio_pell [digits]
+```
 
 ### Pi Calculator (`chudnovsky_bs_pell.java`)
 
-This program calculates the value of pi using the Chudnovsky algorithm.
+Calculates the value of pi using the Chudnovsky algorithm.
 
 #### Usage
 
-To run the program, compile it using `javac chudnovsky_bs_pell.java` and then run it using `java chudnovsky_bs_pell [digits]`, where `[digits]` is the number of digits of pi you want to calculate.
+```bash
+javac chudnovsky_bs_pell.java
+java chudnovsky_bs_pell [digits]
+```
 
 ### Exponential Function Calculator (`exp_bs.java`)
 
-This program calculates the value of e raised to a given power using the Taylor series.
+Calculates the value of \(e\) raised to a given power using the Taylor series.
 
 #### Usage
 
-To run the program, compile it using `javac exp_bs.java` and then run it using `java exp_bs [x] [digits]`, where `[x]` is the power of e and `[digits]` is the number of digits in the result.
+```bash
+javac exp_bs.java
+java exp_bs [x] [digits]
+```
 
 ### Square Root Benchmark (`SqrtBenchmark.java`)
 
-This program benchmarks the performance of calculating square roots using BigDecimal's in-built sqrt method and the custom pell_sqrt method. Note that `pell_sqrt.java` needs to be compiled first before using the benchmark.
+Benchmarks the performance of calculating square roots using BigDecimal's in-built sqrt method and the custom `pell_sqrt` method.
 
 #### Usage
 
-To run the benchmark, compile it using `javac SqrtBenchmark.java` and then run it using `java SqrtBenchmark`.
+```bash
+javac SqrtBenchmark.java
+java SqrtBenchmark
+```
 
 ### Catalan Number Calculator (`CatalanNumber.java`)
 
-This program finds the first n Catalan numbers.
+Finds the first \(n\) Catalan numbers.
 
 #### Usage
 
-To run the program, compile it using `javac CatalanNumber.java` and then run it using `java CatalanNumber`.
+```bash
+javac CatalanNumber.java
+java CatalanNumber
+```
 
 ### Fibonacci Calculator (`Fibonacci.java`)
 
-This program computes the n-th Fibonacci number.
+Computes the \(n\)-th Fibonacci number.
 
 #### Usage
 
-To run the program, compile it using `javac Fibonacci.java` and then run it using `java Fibonacci`.
+```bash
+javac Fibonacci.java
+java Fibonacci
+```
 
 ### RSA Cryptography (`RSA.java`)
 
-This program is a straightforward implementation of RSA encryption, demonstrating the generation of keys, encryption of messages, and decryption back to the original text. It's a practical example of applying RSA for secure communication, showcasing the mathematical principles behind one of the most popular encryption algorithms in use today.
+A straightforward implementation of RSA encryption, demonstrating the generation of keys, encryption of messages, and decryption back to the original text.
 
 #### Usage
 
-To run the program, compile it using `javac RSA.java` and then run it using `java RSA`.
+```bash
+javac RSA.java
+java RSA
+```
+
+## Getting Started
+
+To use these utilities, clone the repository to your local machine and navigate to the desired program's directory. Compile each program using the Java compiler (`javac`) followed by the program's filename. Run the compiled program using `java` followed by the program's name and any required arguments as shown in the usage section for each program.
+
+## Prerequisites
+
+- Java Development Kit (JDK) 8 or higher.
+
+## Contributing
+
+Contributions to the "Java Math Utils" repository are welcome. Please feel free to fork the repository, make your changes, and submit a pull request.
