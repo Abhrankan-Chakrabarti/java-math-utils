@@ -53,7 +53,7 @@ java golden_ratio_pell [digits]
 
 ### Pi Calculator (`chudnovsky_bs_pell.java`)
 
-Calculates the value of pi using the Chudnovsky algorithm.
+Calculates the value of **π** using the Chudnovsky algorithm.
 
 #### Usage
 
