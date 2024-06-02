@@ -20,7 +20,7 @@ javac sqrt.java
 
 ### Pell's Equation Solver (`pell_equation_solver.java`)
 
-Solves the Pell's equation \(x^2 - Dy^2 = 1\) for a given value of \(D\) and finds the first \(n\) solutions.
+Solves the Pell's equation **x² - Dy² = 1** for a given value of **D** and finds the first **n** solutions.
 
 #### Usage
 
@@ -64,7 +64,7 @@ java chudnovsky_bs_pell [digits]
 
 ### Exponential Function Calculator (`exp_bs.java`)
 
-Calculates the value of \(e\) raised to a given power using the Taylor series.
+Calculates the value of **e** raised to a given power using the Taylor series.
 
 #### Usage
 
@@ -86,7 +86,7 @@ java SqrtBenchmark
 
 ### Catalan Number Calculator (`CatalanNumber.java`)
 
-Finds the first \(n\) Catalan numbers.
+Finds the first **n** Catalan numbers.
 
 #### Usage
 
@@ -97,7 +97,7 @@ java CatalanNumber
 
 ### Fibonacci Calculator (`Fibonacci.java`)
 
-Computes the \(n\)-th Fibonacci number.
+Computes the **n**-th Fibonacci number.
 
 #### Usage
 
@@ -127,4 +127,4 @@ To use these utilities, clone the repository to your local machine and navigate 
 
 ## Contributing
 
-Contributions to the "Java Math Utils" repository are welcome. Please feel free to fork the repository, make your changes, and submit a pull request.
+Contributions to the **[Java Math Utils](https://github.com/Abhrankan-Chakrabarti/java-math-utils)** repository are welcome. Please feel free to fork the repository, make your changes, and submit a pull request.
