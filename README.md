@@ -117,6 +117,17 @@ javac RSA.java
 java RSA
 ```
 
+### Arccotangent Calculator (`acot.java`)
+
+Calculates the arccotangent (acot) of a given integer `x` to a specified number of digits `n`.
+
+#### Usage
+
+```bash
+javac acot.java
+java acot
+```
+
 ## Getting Started
 
 To use these utilities, clone the repository to your local machine and navigate to the desired program's directory. Compile each program using the Java compiler (`javac`) followed by the program's filename. Run the compiled program using `java` followed by the program's name and any required arguments as shown in the usage section for each program.
