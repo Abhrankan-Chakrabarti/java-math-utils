@@ -128,6 +128,17 @@ javac acot.java
 java acot
 ```
 
+### Primitive Pythagorean Triples (`PrimitivePythagoreanTriples.java`)
+
+Finds and prints all primitive Pythagorean triples with values between `n1` and `n2`.
+
+#### Usage
+
+```bash
+javac PrimitivePythagoreanTriples.java
+java PrimitivePythagoreanTriples
+```
+
 ## Getting Started
 
 To use these utilities, clone the repository to your local machine and navigate to the desired program's directory. Compile each program using the Java compiler (`javac`) followed by the program's filename. Run the compiled program using `java` followed by the program's name and any required arguments as shown in the usage section for each program.
