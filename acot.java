@@ -98,10 +98,11 @@ class acot
                 Acotx_deg = BigDecimal.valueOf(x == 0 ? 90 : 45 * x);
                 System.out.println("= " + Acotx_deg + "°");
             }
-            BigDecimal Atanx = Pi.divide(BigDecimal.valueOf(2), con).subtract(Acotx);
+            BigDecimal signum = BigDecimal.valueOf(Acotx.signum());
+            BigDecimal Atanx = signum.multiply(Pi.divide(BigDecimal.valueOf(2), con).subtract(Acotx.abs()));
             System.out.println("atan(" + x + ") = " + Atanx + " rad");
             printchar(' ', ntimes);
-            BigDecimal Atanx_deg = BigDecimal.valueOf(90).subtract(Acotx_deg);
+            BigDecimal Atanx_deg = signum.multiply(BigDecimal.valueOf(90).subtract(Acotx_deg.abs()));
             System.out.println("= " + Atanx_deg + "°");
         }
     }
