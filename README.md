@@ -128,6 +128,20 @@ javac acot.java
 java acot
 ```
 
+This program computes the arccotangent (acot) of a given integer `x` to a specified number of digits `n`. It also computes the arctangent (atan) of `x` and displays the results in both radians and degrees.
+
+#### Example
+
+```scss
+This program computes acot(x).
+Enter an integer x :    5
+How many digits of acot(5)? : 10
+acot(5) = 0.1973955598 rad
+        = 11.30993247°
+atan(5) = 1.3734007672 rad
+        = 78.69006753°
+```
+
 ### Primitive Pythagorean Triples (`PrimitivePythagoreanTriples.java`)
 
 Finds and prints all primitive Pythagorean triples with values between `n1` and `n2`.

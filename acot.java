@@ -74,6 +74,7 @@ class acot
         if (n > 0)
         {
             MathContext con = new MathContext(n);
+            BigDecimal Pi = pi(n), Acotx, Acotx_deg;
             int ntimes;
             if (x == 0)
                 ntimes = 8;
@@ -82,16 +83,26 @@ class acot
             if (Math.abs(x) != 1 && x != 0)
             {
                 acot acotx = new acot(x, n);
-                System.out.println("acot(" + x + ") = " + acotx.toString() + " rad");
+                String acotx_str = acotx.toString();
+                Acotx = new BigDecimal(acotx_str);
+                System.out.println("acot(" + x + ") = " + acotx_str + " rad");
                 printchar(' ', ntimes);
-                System.out.println("= " + BigDecimal.valueOf(180).multiply(new BigDecimal(acotx.toString())).divide(pi(n), con) + "°");
+                Acotx_deg = BigDecimal.valueOf(180).multiply(Acotx).divide(Pi, con);
+                System.out.println("= " + Acotx_deg + "°");
             }
             else
             {
-                System.out.println("acot(" + x + ") = " + BigDecimal.valueOf(x == 0 ? 1 : x).multiply(pi(n)).divide(BigDecimal.valueOf(x == 0 ? 2 : 4), con) + " rad");
+                Acotx = BigDecimal.valueOf(x == 0 ? 1 : x).multiply(Pi).divide(BigDecimal.valueOf(x == 0 ? 2 : 4), con);
+                System.out.println("acot(" + x + ") = " + Acotx + " rad");
                 printchar(' ', ntimes);
-                System.out.println("= " + (x == 0 ? 90 : 45 * x) + "°");
+                Acotx_deg = BigDecimal.valueOf(x == 0 ? 90 : 45 * x);
+                System.out.println("= " + Acotx_deg + "°");
             }
+            BigDecimal Atanx = Pi.divide(BigDecimal.valueOf(2), con).subtract(Acotx);
+            System.out.println("atan(" + x + ") = " + Atanx + " rad");
+            printchar(' ', ntimes);
+            BigDecimal Atanx_deg = BigDecimal.valueOf(90).subtract(Acotx_deg);
+            System.out.println("= " + Atanx_deg + "°");
         }
     }
 }
