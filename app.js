@@ -72,12 +72,12 @@ class acot
 
     valueOf(x, n)
     {
-        return new acot(x, n).toString();
+        return Big(new acot(x, n).toString());
     }
 
     toString()
     {
-        var acotx = bigIntAbs(this.s / (10n ** BigInt(this.n + this.x))).toString() + "." + zfill((this.s / (10n ** BigInt(this.x))) % (10n ** BigInt(this.n)), this.n);
+        var acotx = (this.s / (10n ** BigInt(this.n + this.x))).toString() + "." + zfill(bigIntAbs(this.s / (10n ** BigInt(this.x))) % (10n ** BigInt(this.n)), this.n);
         if (this.s < 0n)
             acotx = "-" + acotx;
         return acotx;
