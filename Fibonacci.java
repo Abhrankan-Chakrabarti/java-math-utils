@@ -11,11 +11,13 @@ class Fibonacci
             return BigInteger.ONE;
         if (n % 2 == 0)
         {
-            BigInteger a = F(n / 2), b = F(n / 2 - 1);
+	    int k = n / 2;
+            BigInteger a = F(k), b = F(k - 1);
             return a.multiply(BigInteger.valueOf(2).multiply(b).add(a));
         }
-        BigInteger a = F((n + 1) / 2), b = F((n - 1) / 2);
-        return a.multiply(a).add(b.multiply(b));
+	int k = (n - 1) / 2;
+        BigInteger a = F(k), b = F(k - 1);
+        return BigInteger.valueOf(4).multiply(a.multiply(a)).subtract(b.multiply(b)).add(BigInteger.valueOf(-4 * (k % 2) + 2));
     }
 
     public static void main(String args[])
