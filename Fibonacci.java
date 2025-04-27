@@ -17,7 +17,7 @@ class Fibonacci
         }
 	int k = (n - 1) / 2;
         BigInteger a = F(k), b = F(k - 1);
-        return BigInteger.valueOf(4).multiply(a.multiply(a)).subtract(b.multiply(b)).add(BigInteger.valueOf(-4 * (k % 2) + 2));
+        return BigInteger.valueOf(2).multiply(a).add(b).multiply(BigInteger.valueOf(2).multiply(a).subtract(b)).add(BigInteger.valueOf(-4 * (k % 2) + 2));
     }
 
     public static void main(String args[])
